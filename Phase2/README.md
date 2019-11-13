@@ -2,74 +2,6 @@
 
 ## 11K Hands :Gender Recognition and Biometric Identification using large dataset of hand images
 
-### Phase 1:
-
-**Note:** The CLI for the Phase 1 is inside the folder Phase 1, named Phase_1.py 
-
-* **Task 0:** In this project, we will use the data sets associated with the following publication:
-Mahmoud Afifi. “11K Hands: Gender recognition and biometric identification using a large dataset of hand
-images.” M. Multimed Tools Appl (2019) 78: 20835.
-The data sets are available at https://sites.google.com/view/11khands
-
-* **Task 1:** 
-Implement a program which, given an image ID and one of the following models, extracts and prints (in a human
-readable form) the corresponding feature descriptors:<br />
-    a\. **Local binary patterns, LBP100x100:** Split the image into 100x100 windows, compute LBP features for each window, and concatenate these to obtain a unified feature descriptor.
-Note that LBP is computed on gray scale images thus, need to first convert the images to gray scale. 
-Similarity measure used is Chi Square Statistic.
- https://link.springer.com/content/pdf/10.1007%2F978-3-540-24670-1_36.pdf
-    ```text
-    Parameters used:
-    radius: 2
-    Number of circularly symmetric neighbour set points: 8
-    ```
-  b\. **Histograms of oriented gradients, HOG:** Convert the images to gray scale and then down-sample images 1-per-10 (rows and columns).
-    ```text
-    Parameters used:
-    Number of orientation bins: 9
-    Pixels per cell: 8
-    Cells per block: 2
-    ```
-    To run Task 1,
-    ```
-    $ python Phase_1.py
-
-    Please specify the task number: 1
-    1.LBP
-    2.HOG
-    Select model: <Model Name>
-    Please specify the test image file name: <Test Image File name>
-    ```
-* **Task 2:**
-Implement a program which, given a folder with images, extracts and stores feature descriptors for all the images
-in the folder.<br/>
-To run Task 2,
-    ```
-    $ python Phase_1.py
-
-    Please specify the task number: 2
-    1.LBP
-    2.HOG
-    Select model: <Model Name>
-    Please specify test folder path: <Test Image Folder path>
-    ```
-
-* **Task 3:**
-Implement a program which, given an image ID, a model, and a value “k”, returns and visualizes the most
-similar k images based on the corresponding visual descriptors. For each match, also list the overall matching score.<br/>
-To run Task 3,
-    ```
-    $ python Phase_1.py
-
-    Please specify the task number: 3
-    1.LBP
-    2.HOG
-    Select model: <Model Name>
-    Please specify the test image file name: <Test Image File name>
-    Please specify k: <Number of similar images to visualize>
-    Please specify test folder path: <Test Image Folder path>
-    ```
-
 ### Phase 2:
 
 * **Task 1:** 
@@ -158,8 +90,6 @@ To run Task 3,
     
     Please choose an option: <label_number>
     Please specify the number of components:<num_components>
-    
-                                          
     ```
     
  * **Task 4:**
@@ -247,6 +177,7 @@ To run Task 5,
     Please specify the test image file name:<File Name>
                                               
     ```
+    
 * **Task 6:** 
 Implement a program which given ( a subject ID, identifies and visualizes the most related 3 subjects (you are
 free the use any feature model and latent semantics) <br/>
@@ -281,3 +212,5 @@ To run Task 8,
     $ python Phase_2.py
 
     Enter the number of latent features to consider:<latent_num>
+
+    ```
